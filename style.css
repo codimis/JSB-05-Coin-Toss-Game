@@ -1,0 +1,88 @@
+* {
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  background-image: linear-gradient(
+    0deg,
+    rgb(171, 219, 227) 23.8%,
+    rgb(6, 57, 112) 92%
+  );
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#cover {
+  position: relative;
+  width: 130px;
+}
+
+.player--0 {
+  float: left;
+  width: 300px;
+  border: 15px solid rgb(39, 84, 95);
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 5px 5px rgb(128, 128, 128);
+}
+
+.player--1 {
+  float: right;
+  width: 300px;
+  border: 15px solid rgb(39, 84, 95);
+  padding: 50px;
+  margin: 20px;
+  box-shadow: 10px 5px 5px rgb(128, 128, 128, 128);
+}
+
+.current-label {
+  float: left;
+}
+
+.current-score {
+  float: right;
+}
+
+.btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.btn {
+  width: 80px;
+  height: 40px;
+}
+
+.player--winner {
+  background-color: #099dff;
+}
+
+.player--winner .name {
+  font-size: 40px;
+  float: left;
+  color: #ffffff;
+}
+
+.re--start {
+  margin: 0;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  width: 150px;
+}
