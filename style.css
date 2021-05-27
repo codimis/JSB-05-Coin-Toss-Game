@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", serif;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #000;
+  margin-bottom: 30px;
+}
+h1 {
+  color: #fff;
+  font-size: 44px;
+  padding: 30px 0;
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+}
+img {
+  width: 120px;
+}
+.result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.score-board {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  padding: 20px;
+  border: 2px solid black;
+  font-size: 44px;
+  margin-bottom: 30px;
+}
+.score-title {
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+.computer {
+  right: -30px;
+  top: 40px;
+}
+.user {
+  left: -25px;
+  top: 40px;
+}
+#coin {
+  position: relative;
+  width: 130px;
+  height: 130px;
+  transition: -webkit-transform 1s ease-in;
+  transform-style: preserve-3d;
+}
+#coin div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  backface-visibility: hidden;
+}
+.side-a {
+  background: url(img/coin.svg) no-repeat;
+  z-index: 100;
+}
+.side-b {
+  background: url(img/coin-d.svg) no-repeat;
+  transform: rotateY(-180deg);
+}
+.heads {
+  background-position: center;
+  transform: rotateY(180deg);
+  animation: flipHeads 3s ease-out forwards;
+}
+.tails {
+  background-position: center;
+  animation: flipTails 3s ease-out forwards;
+}
+.messages {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 30px;
+}
+.choices {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.choices img {
+  margin: 10px 50px;
+  width: 100px;
+}
+@keyframes flipHeads {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(1800deg);
+  }
+}
+@keyframes flipTails {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(1980deg);
+  }
+}
