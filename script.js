@@ -4,6 +4,11 @@ const playerComputer = document.querySelector(".player--1");
 const currentUser = document.getElementById("current--0");
 const currentComputer = document.getElementById("current--1");
 
+const currentLabel0 = document.querySelector(`.current-label-0`);
+const currentScore0 = document.querySelector(`.current-score-0`);
+const currentLabel1 = document.querySelector(`.current-label-1`);
+const currentScore1 = document.querySelector(`.current-score-1`);
+
 const btnHeads = document.querySelector(".btn--heads");
 const btnTail = document.querySelector(".btn--tail");
 const btnRestart = document.querySelector(".re--start");
@@ -17,6 +22,11 @@ let computerScore = 0;
 const init = function () {
   userScore = 0;
   computerScore = 0;
+
+  currentLabel0.textContent = "Current Score:";
+  currentLabel1.textContent = "Current Score:";
+  currentScore0.value = 0;
+  currentScore1.value = 0;
 
   playerUser.classList.remove("hidden");
   playerComputer.classList.remove("hidden");
@@ -85,5 +95,10 @@ const winnerCheck = function () {
   btnHeads.classList.add("hidden");
   cover.classList.add("hidden");
   document.querySelector(`.main-name`).textContent = "and the WINNER is...";
+
+  currentLabel0.textContent = "";
+  currentLabel1.textContent = "";
+  currentScore0.textContent = "";
+  currentScore1.textContent = "";
   btnRestart.classList.remove("hidden");
 };
