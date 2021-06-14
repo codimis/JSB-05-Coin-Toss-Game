@@ -1,0 +1,152 @@
+:root {
+  --lightgray: #d3c6bf;
+  --pastelyellow: #d4b98a;
+  --lightyellow: rgba(212, 185, 138, 0.5);
+}
+
+* {
+  font-family: "Pangolin", cursive;
+  margin: 5px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Pangolin", cursive;
+  background: var(--lightgray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.main-name {
+  font-family: "Pangolin", cursive;
+}
+
+#cover {
+  position: relative;
+  width: 130px;
+}
+
+/* 
+PLAYER BOXES
+*/
+
+.player--0 {
+  float: left;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 35px;
+  box-shadow: 10px 5px 5px rgb(128, 128, 128);
+
+  background: var(--pastelyellow);
+}
+
+.player--1 {
+  float: right;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 35px;
+  box-shadow: 10px 5px 5px rgb(128, 128, 128, 128);
+
+  background: var(--pastelyellow);
+}
+
+.current-label {
+  float: left;
+}
+
+.current-score {
+  float: right;
+}
+
+/*
+BUTTONS
+*/
+
+.btn {
+  margin-left: 260px;
+  margin-right: 150px;
+  border-radius: 5px;
+  border: none;
+  align-items: center;
+}
+
+.btn--heads,
+.btn--tail {
+  background: var(--lightyellow);
+  display: inline-block;
+  margin-right: auto;
+  margin-left: auto;
+  width: 80px;
+  height: 50px;
+}
+
+.btn--heads:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+.btn--tail:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+}
+
+.current {
+  display: flex;
+}
+
+/*----------------------------------
+
+WINNER section
+
+----------------------------------*/
+.player--winner {
+  background-color: #099dff;
+  margin: auto;
+  width: 100%;
+  float: none;
+}
+
+.player--winner .name {
+  font-size: 50px;
+  color: #ffffff;
+  text-align: center;
+}
+
+.re--start {
+  margin-left: 150px;
+  margin-right: 150px;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  align-items: center;
+  display: inline-block;
+
+  background: var(--lightyellow);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  font-size: 20px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: #806d4d;
+  text-align: center;
+  position: fixed;
+  bottom: 0px;
+  padding: 10px;
+}
+
+footer a {
+  color: #806d4d;
+}
